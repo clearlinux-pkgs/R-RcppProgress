@@ -4,14 +4,15 @@
 #
 Name     : R-RcppProgress
 Version  : 0.4.1
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/RcppProgress_0.4.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RcppProgress_0.4.1.tar.gz
 Summary  : An Interruptible Progress Bar with OpenMP Support for C++ in R
 Group    : Development/Tools
 License  : GPL-3.0 GPL-3.0+
-Requires: R-assertthat
+Requires: R-rlang
 BuildRequires : R-assertthat
+BuildRequires : R-rlang
 BuildRequires : buildreq-R
 
 %description
@@ -28,10 +29,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552784271
+export SOURCE_DATE_EPOCH=1552950589
 
 %install
-export SOURCE_DATE_EPOCH=1552784271
+export SOURCE_DATE_EPOCH=1552950589
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
