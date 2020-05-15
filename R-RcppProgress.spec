@@ -4,7 +4,7 @@
 #
 Name     : R-RcppProgress
 Version  : 0.4.2
-Release  : 26
+Release  : 27
 URL      : https://cran.r-project.org/src/contrib/RcppProgress_0.4.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RcppProgress_0.4.2.tar.gz
 Summary  : An Interruptible Progress Bar with OpenMP Support for C++ in R
@@ -13,28 +13,28 @@ License  : GPL-3.0 GPL-3.0+
 BuildRequires : buildreq-R
 
 %description
-# RcppProgress
-[![Build Status](https://travis-ci.org/kforner/rcpp_progress.svg?branch=dev)](https://travis-ci.org/kforner/rcpp_progress?branch=dev)
-[![codecov](https://codecov.io/github/kforner/rcpp_progress/coverage.svg?branch=dev)](https://codecov.io/github/kforner/rcpp_progress?branch=dev)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/RcppProgress)](https://cran.r-project.org/package=RcppProgress)
+console for long running computations taking place in c++ code,
+    and support for interrupting those computations even in multithreaded
+    code, typically using OpenMP.
 
 %prep
 %setup -q -c -n RcppProgress
+cd %{_builddir}/RcppProgress
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581053195
+export SOURCE_DATE_EPOCH=1589514830
 
 %install
-export SOURCE_DATE_EPOCH=1581053195
+export SOURCE_DATE_EPOCH=1589514830
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
