@@ -4,7 +4,7 @@
 #
 Name     : R-RcppProgress
 Version  : 0.4.2
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/RcppProgress_0.4.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RcppProgress_0.4.2.tar.gz
 Summary  : An Interruptible Progress Bar with OpenMP Support for C++ in R
